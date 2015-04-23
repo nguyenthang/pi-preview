@@ -1,38 +1,37 @@
 package com.tma.pi.preview;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.tma.pi.preview.bean.Number;
+
 
 /**
- * Unit test for simple App.
+ * @author thangnguyen
+ *
  */
+
 public class AppTest 
-    extends TestCase
+   
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	List<Number> listNumbers;
+	
+	@Before
+	public void setUp() throws Exception{
+		listNumbers = new ArrayList<Number>();
+	}
+	
+	@After
+	public void tearDown() throws Exception{
+		listNumbers = null;
+	}
+	
+	@Test
+	public void testBlockNumber(){
+		
+	}
 }
